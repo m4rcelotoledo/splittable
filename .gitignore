@@ -18,3 +18,4 @@ splittable*.gem
 /spec/examples.txt
 
 .tool-versions
+.env
