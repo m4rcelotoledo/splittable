@@ -15,10 +15,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Ruby version specified in `.ruby-version`
+        with:
+          ruby-version: .ruby-version
+        uses: ruby/setup-ruby@v1
+
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
       - name: Release Gem
         uses: m4rcelotoledo/publish-rubygems-action@master
         env:
           RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_RELEASE}}
-          GIT_EMAIL: automated_release@useblu.com.br
+          GIT_EMAIL: automated_release@gmail.com
           GIT_NAME: 'Automated Release'
           RELEASE_COMMAND: bundle exec rake release
