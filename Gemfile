@@ -4,10 +4,10 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'bigdecimal', '~> 3.0'
-gem 'pry-byebug', '~> 3.9'
-gem 'rake', '~> 13.0.3'
-gem 'rspec', '~> 3.10'
+gem 'bigdecimal'
+gem 'pry-byebug'
+gem 'rake'
+gem 'rspec'
 
 group :development, :test do
   gem 'rubocop', require: false
