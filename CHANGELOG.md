@@ -1,3 +1,10 @@
+## splittable 0.0.7 (Oct 14, 2025)
+
+* Update repository
+* Update Ruby and Gems versions
+
+  *Marcelo Toledo*
+
 ## splittable 0.0.5 (Feb 02, 2021)
 
 * Add precision parameter to division and normilize methods

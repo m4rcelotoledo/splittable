@@ -13,12 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Release Gem
-        uses: marcelotoledo5000/publish-rubygems-action@master
+        uses: m4rcelotoledo/publish-rubygems-action@master
         env:
-          GITHUB_TOKEN: ${{secrets.BUNDLE_GITHUB__COM}}
           RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_RELEASE}}
           GIT_EMAIL: automated_release@useblu.com.br
           GIT_NAME: 'Automated Release'
