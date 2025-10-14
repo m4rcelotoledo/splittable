@@ -1,7 +1,7 @@
 # Splittable
 
 [![Gem Version](https://badge.fury.io/rb/splittable.svg)](https://badge.fury.io/rb/splittable)
-[![Ruby](https://github.com/Pagnet/splittable/workflows/Ruby/badge.svg?branch=master)](https://github.com/Pagnet/splittable/actions?query=workflow%3ARuby)
+[![Ruby](https://github.com/m4rcelotoledo/splittable/workflows/Ruby/badge.svg?branch=master)](https://github.com/m4rcelotoledo/splittable/actions?query=workflow%3ARuby)
 
 ## Goal
 
@@ -86,8 +86,8 @@ To manual release update the version and then run `bundle exec rake release`, wh
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/Pagnet/splittable/blob/master/CONTRIBUTING.md.
+Bug reports and pull requests are welcome on GitHub at https://github.com/m4rcelotoledo/splittable/blob/master/CONTRIBUTING.md.
 
 ## Code of Conduct
 
-Welcome on GitHub at https://github.com/Pagnet/splittable/blob/master/CODE_OF_CONDUCT.md.
+Welcome on GitHub at https://github.com/m4rcelotoledo/splittable/blob/master/CODE_OF_CONDUCT.md.

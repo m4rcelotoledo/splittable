@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Release Gem
-        uses: marcelotoledo5000/publish-rubygems-action@master
+        uses: m4rcelotoledo/publish-rubygems-action@master
         env:
           GITHUB_TOKEN: ${{secrets.BUNDLE_GITHUB__COM}}
           RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_RELEASE}}
