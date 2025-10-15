@@ -1,3 +1,29 @@
+# splittable 0.0.8 (Oct 14, 2025)
+
+* **Documentation Improvements**
+  * Complete README.md rewrite with better examples and real-world use cases
+  * Added comprehensive problem explanation with before/after examples
+  * Included e-commerce, invoice distribution, and subscription billing examples
+  * Added error handling documentation and development setup instructions
+  * Improved project structure documentation
+
+* **Gemspec Enhancements**
+  * Updated summary and description for better clarity and professionalism
+  * Added explicit BigDecimal dependency declaration
+  * Enhanced metadata with bug tracker URI
+  * Fixed RubyGems metadata warnings
+
+* **CI/CD Improvements**
+  * Fixed publish workflow to use correct Ruby version (3.4.6)
+  * Added proper dependency installation steps in release workflow
+  * Resolved Ruby version compatibility issues
+
+* **Code Quality**
+  * Maintained 100% test coverage
+  * All existing functionality preserved and tested
+
+  *Marcelo Toledo*
+
 ## splittable 0.0.7 (Oct 14, 2025)
 
 * Update repository
