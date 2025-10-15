@@ -60,5 +60,33 @@ RSpec.describe Splittable do
         expect(normalized).to eq(example[:result])
       end
     end
+
+    context 'when installments is empty array' do
+      let(:value) { 100 }
+      let(:installments) { [] }
+      let(:precision) { 2 }
+      let(:error_message) { 'installments should be a non-empty array' }
+
+      it {
+        expect do
+          described_class.normalize(value: value, installments: installments,
+                                    precision: precision)
+        end.to raise_error(ArgumentError, error_message)
+      }
+    end
+
+    context 'when installments is nil' do
+      let(:value) { 100 }
+      let(:installments) { nil }
+      let(:precision) { 2 }
+      let(:error_message) { 'installments should be a non-empty array' }
+
+      it {
+        expect do
+          described_class.normalize(value: value, installments: installments,
+                                    precision: precision)
+        end.to raise_error(ArgumentError, error_message)
+      }
+    end
   end
 end
