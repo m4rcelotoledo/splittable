@@ -91,7 +91,7 @@ amounts = [400.00, 350.00, 250.00]
 
 normalized = Splittable.normalize(value: 1000.01, installments: amounts)
 # => [400.01, 350.00, 250.00]
-# Total: $1,000.00 ✅
+# Total: $1,000.01 ✅
 ```
 
 ### Subscription Billing
