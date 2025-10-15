@@ -99,7 +99,7 @@ normalized = Splittable.normalize(value: 1000.01, installments: amounts)
 # Annual subscription split into monthly payments
 monthly_payment = Splittable.division(value: 120.01, quantity: 12)
 # => [10.01, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00]
-# Total: $120.00 ✅
+# Total: $120.01 ✅
 ```
 
 ## ⚠️ Error Handling
