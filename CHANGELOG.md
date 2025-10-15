@@ -1,4 +1,30 @@
-# splittable 0.0.8 (Oct 14, 2025)
+# splittable 0.0.9 (Oct 15, 2025)
+
+* **Bug Fixes**
+  * Fixed incorrect examples in README.md with mathematically accurate values
+  * Corrected division examples to show proper cent adjustment behavior
+  * Fixed normalize examples to demonstrate actual gem behavior
+
+* **Error Handling Improvements**
+  * Added proper validation for empty installments array in normalize method
+  * Added validation for nil installments parameter
+  * Improved error messages with clear ArgumentError exceptions
+  * Enhanced error handling documentation with accurate examples
+
+* **Test Coverage**
+  * Added comprehensive tests for error handling scenarios
+  * Added tests for empty and nil installments arrays
+  * Maintained 100% test coverage (38 examples, 0 failures)
+  * Improved test readability with better formatting
+
+* **Code Quality**
+  * Enhanced input validation in Splittable::Normalize class
+  * Improved error messages for better developer experience
+  * All existing functionality preserved and thoroughly tested
+
+  *Marcelo Toledo*
+
+## splittable 0.0.8 (Oct 14, 2025)
 
 * **Documentation Improvements**
   * Complete README.md rewrite with better examples and real-world use cases
