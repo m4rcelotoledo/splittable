@@ -52,7 +52,7 @@ Split a total value into equal installments:
 ```ruby
 # Basic usage - split $0.12 into 3 equal parts
 Splittable.division(value: 0.12, quantity: 3)
-# => [0.05, 0.03, 0.03]  # Sum: 0.11 (truncated from 0.12)
+# => [0.04, 0.04, 0.04]  # Sum: 0.12
 
 # Custom precision - 3 decimal places
 Splittable.division(value: 10, quantity: 3, precision: 3)
@@ -79,7 +79,7 @@ Splittable.normalize(value: 100, installments: [33.333, 33.333, 33.333], precisi
 ```ruby
 # Split a $99.99 order into 3 monthly payments
 payments = Splittable.division(value: 99.99, quantity: 3)
-# => [33.34, 33.33, 33.33]
+# => [33.33, 33.33, 33.33]
 # Total: $99.99 ✅
 ```
 
@@ -89,7 +89,7 @@ payments = Splittable.division(value: 99.99, quantity: 3)
 departments = ['Sales', 'Marketing', 'Support']
 amounts = [400.00, 350.00, 250.00]
 
-normalized = Splittable.normalize(value: 1000.00, installments: amounts)
+normalized = Splittable.normalize(value: 1000.01, installments: amounts)
 # => [400.01, 350.00, 250.00]
 # Total: $1,000.00 ✅
 ```
@@ -97,7 +97,7 @@ normalized = Splittable.normalize(value: 1000.00, installments: amounts)
 ### Subscription Billing
 ```ruby
 # Annual subscription split into monthly payments
-monthly_payment = Splittable.division(value: 120.00, quantity: 12)
+monthly_payment = Splittable.division(value: 120.01, quantity: 12)
 # => [10.01, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00]
 # Total: $120.00 ✅
 ```
@@ -111,7 +111,11 @@ Splittable.division(value: 100, quantity: 0)
 
 # Empty installments array
 Splittable.normalize(value: 100, installments: [])
-# => NoMethodError: undefined method `[]' for nil:NilClass
+# => ArgumentError: installments should be a non-empty array
+
+# Nil installments
+Splittable.normalize(value: 100, installments: nil)
+# => ArgumentError: installments should be a non-empty array
 ```
 
 ## 🛠️ Development
