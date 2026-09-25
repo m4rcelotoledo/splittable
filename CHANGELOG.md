@@ -1,4 +1,7 @@
-# splittable 0.0.9 (Oct 15, 2025)
+# splittable 0.0.10 (Sep 25, 2026)
+
+* **Bump Versions**
+  * Fixed a vulnerability in libs
 
 * **Bug Fixes**
   * Fixed incorrect examples in README.md with mathematically accurate values
