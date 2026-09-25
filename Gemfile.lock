@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    splittable (0.0.9)
+    splittable (0.0.10)
       bigdecimal (~> 3.0)
 
 GEM
