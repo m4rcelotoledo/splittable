@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master
-    tags:
-      - v*
 
 jobs:
   publish:
@@ -13,9 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
+      - name: Decide whether this version is unpublished
+        id: release
+        run: |
+          version=$(ruby -r ./lib/splittable/version.rb -e 'puts Splittable::VERSION')
+          if git ls-remote --exit-code --tags origin "refs/tags/v${version}"; then
+            echo "Version v${version} is already tagged. Skipping publish."
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Version v${version} has no tag yet."
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Release Gem
+        if: steps.release.outputs.publish == 'true'
         uses: m4rcelotoledo/publish-rubygems-action@master
         env:
           RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_RELEASE}}
